@@ -1,7 +1,8 @@
 async function tempo(request, response) {
-     const dynamicDate = new Date();
+    const apiSecret = process.env.YOUTUBE_API_KEY;
+    const dynamicDate = new Date();
 
-    const subscribersResponse = await fetch("https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC8Jd-aVn0IsYLtVyABvWmVA&key=AIzaSyAnmDCkM-vYLmLlbsT1nTEu-amTtMynqR0");
+    const subscribersResponse = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC8Jd-aVn0IsYLtVyABvWmVA&key=${apiSecret}`);
     const subscribersResponseJson = await subscribersResponse.json();
     const inscritos = subscribersResponseJson.items[0].statistics.subscriberCount;
 
