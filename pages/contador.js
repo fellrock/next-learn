@@ -1,26 +1,22 @@
 import {useState} from 'react';
 import Link from 'next/link';
 
-function Home() {
+function Contador() {
     return (
         <div>
-            <h1>Home</h1>
             
-            <Link href="/contador">
-                <a>Contador</a>
+            <Link href="/">
+                <a>Acessar página Home</a>
             </Link>
 
             <p></p>
-
-            <Link href="/sobre">
-                <a>Acessar página Sobre</a>
-            </Link>
-
+            <Contadora />
         </div>
     )
 }
 
-function Contador() {
+
+function Contadora() {
     const [contador,setContador] = useState(1);
 
     function adicionarContador() {
@@ -34,4 +30,4 @@ function Contador() {
     )
 }
 
-export default Home;
+export default Contador;
