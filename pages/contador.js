@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import Link from 'next.link';
+import Link from 'next/link';
 
 function Contador() {
     return (
@@ -8,7 +8,7 @@ function Contador() {
             <Link href="/">
                 <a>Acessar página Home</a>
             </Link>
-            
+
             <p></p>
             <Contadora />
         </div>
